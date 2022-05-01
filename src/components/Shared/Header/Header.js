@@ -10,13 +10,13 @@ const Header = () => {
           <FaDumbbell className='text-secondary text-5xl' />
           <span className='uppercase'>Gymo</span>
         </div>
-        <nav className='flex gap-5 items-center text-lg'>
+        <nav className='flex gap-8 items-center text-lg uppercase'>
           <CustomLink to='/'>Home</CustomLink>
           <CustomLink to='/blogs'>Blogs</CustomLink>
           <CustomLink to='/manageitems'>Manage Items</CustomLink>
           <CustomLink to='/additem'>Add Item</CustomLink>
           <CustomLink to='/myitems'>My Items</CustomLink>
-          <CustomLink to='/account'>Login / Sign Up</CustomLink>
+          <CustomLink to='/signin'>Sign In</CustomLink>
         </nav>
       </div>
     </header>
