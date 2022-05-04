@@ -24,9 +24,13 @@ const Header = () => {
         <nav className=' gap-5 items-center text-lg hidden md:flex'>
           <CustomLink to='/'>Home</CustomLink>
           <CustomLink to='/blogs'>Blogs</CustomLink>
-          <CustomLink to='/manageitems'>Manage Items</CustomLink>
-          <CustomLink to='/additem'>Add Item</CustomLink>
-          <CustomLink to='/myitems'>My Items</CustomLink>
+          {user?.email && (
+            <>
+              <CustomLink to='/manageitems'>Manage Items</CustomLink>
+              <CustomLink to='/additem'>Add Item</CustomLink>
+              <CustomLink to='/myitems'>My Items</CustomLink>
+            </>
+          )}
 
           {user?.email ? (
             <button onClick={handleSignOut}>Sign Out</button>
