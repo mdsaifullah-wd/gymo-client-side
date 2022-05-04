@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Item = ({ item }) => {
-  const { id, name, image, description, price, quantity, supplier } = item;
+  const { _id, name, image, description, price, quantity, supplier } = item;
   const navigate = useNavigate();
   const showInventoryDetails = (id) => {
     navigate(`/inventory/${id}`);
@@ -20,7 +20,7 @@ const Item = ({ item }) => {
             <p>Supplier: {supplier}</p>
           </div>
           <button
-            onClick={() => showInventoryDetails(id)}
+            onClick={() => showInventoryDetails(_id)}
             className='w-full h-10 border-2 border-light rounded-md hover:bg-secondary hover:border-secondary hover:text-dark'>
             Update Stock
           </button>

@@ -84,7 +84,7 @@ const Authentication = () => {
   )
     ? 'No user found with this email'
     : errors.email?.message ||
-      errorFromSignIn?.message.includes('auth/email-already-in-use')
+      errorFromSignUp?.message.includes('auth/email-already-in-use')
     ? 'Email already exist'
     : errors.email?.message;
 
