@@ -83,6 +83,8 @@ const Authentication = () => {
     'auth/user-not-found'
   )
     ? 'No user found with this email'
+    : errorFromSignIn?.message.includes('auth/email-already-in-use')
+    ? 'Email already exist'
     : errors.email?.message;
 
   let passwordFieldErrors =
