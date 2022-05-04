@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Fitness Adjustable Dumbbell",
+    "image": "https://www.thewarehouse.co.nz/dw/image/v2/BDMG_PRD/on/demandware.static/-/Sites-twl-master-catalog/default/dwb328d54a/images/hi-res/21/CB/R1857337_00.jpg?sw=765&sh=765",
+    "description": "Active Intent Fitness Adjustable Dumbbell Set in Plastic Case Black 20kg. Its a good quality dumbbell for fitness aware customers",
+    "price": "85",
+    "quantity": "120",
+    "supplier": "True Fitness"
+  },
+  {
+    "id": 2,
+    "name": "Active Fitness Folding Bench",
+    "image": "https://www.thewarehouse.co.nz/dw/image/v2/BDMG_PRD/on/demandware.static/-/Sites-twl-master-catalog/default/dw88e848d1/images/hi-res/53/5C/R2663878_30.jpg?sw=765&sh=765",
+    "description": "Active Intent Fitness Folding Fitness Bench which has max users limit of 100kg with heavy-duty comfort cushion padding",
+    "price": "119",
+    "quantity": "96",
+    "supplier": "Icon Health & Fitness"
+  },
+  {
+    "id": 3,
+    "name": "Health Cast Iron Barbell",
+    "image": "https://www.thewarehouse.co.nz/dw/image/v2/BDMG_PRD/on/demandware.static/-/Sites-twl-master-catalog/default/dwb9693c5d/images/hi-res/4E/80/R1857338_00.jpg?sw=765&sh=765",
+    "description": "A good quality barbell/dumbbell for fitness aware customers. Active Intent Fitness Cast Iron Barbell/Dumbbell Set in Case 50kg.",
+    "price": "239",
+    "quantity": "80",
+    "supplier": "Life Fitness"
+  },
+  {
+    "id": 4,
+    "name": "Fitness Flat Bench",
+    "image": "https://www.thewarehouse.co.nz/dw/image/v2/BDMG_PRD/on/demandware.static/-/Sites-twl-master-catalog/default/dw71f6a2fd/images/hi-res/3F/A4/R2663877_30.jpg?sw=765&sh=765",
+    "description": "Active Intent Fitness Flat Fitness Bench With Heavy-duty comfort cushion padding. It is Perfect to build strength and muscle. Max user's weight limit is 100kg",
+    "price": "60",
+    "quantity": "150",
+    "supplier": "Precor"
+  },
+  {
+    "id": 5,
+    "name": " Fitness Mini Stepper",
+    "image": "https://www.thewarehouse.co.nz/dw/image/v2/BDMG_PRD/on/demandware.static/-/Sites-twl-master-catalog/default/dwada8632a/images/hi-res/9A/FB/R1851413_00.jpg?sw=765&sh=765",
+    "description": "Active Intent Fitness Mini Stepper Black/Grey, Suitable fo indoo exercise, Broad and skidfree pedals, Assembled size: 48 x 29.5 x 42cm, Max weight limit: 100kg",
+    "price": "42",
+    "quantity": "280",
+    "supplier": "Nautilus International"
+  },
+  {
+    "id": 6,
+    "name": "Fitness Exercise Bike",
+    "image": "https://www.thewarehouse.co.nz/dw/image/v2/BDMG_PRD/on/demandware.static/-/Sites-twl-master-catalog/default/dw6cefe04f/images/hi-res/FD/78/R2663876_30.jpg?sw=765&sh=765",
+    "description": "Active Intent Fitness Exercise Bike, Monitor: Scan/Time/Speed/Dis./Cal./Pulse, 8-level manual resistance, Spec: 6kg flywheel, One way bearing, Crank: 3pcs",
+    "price": "399",
+    "quantity": "60",
+    "supplier": "Cybex International"
+  }
+]

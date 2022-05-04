@@ -1,10 +1,11 @@
 import React from 'react';
+import InventoryItems from './InventoryItems/InventoryItems';
 
 const Home = () => {
   return (
-    <div>
-      <h2 className='text-primary text-5xl'>Home</h2>
-    </div>
+    <>
+      <InventoryItems />
+    </>
   );
 };
 
