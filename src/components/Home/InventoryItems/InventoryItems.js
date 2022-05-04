@@ -4,7 +4,7 @@ import Item from './Item/Item';
 const InventoryItems = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch('data.json')
+    fetch('https://gymowarehouse.herokuapp.com/inventory')
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
