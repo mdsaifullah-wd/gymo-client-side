@@ -3,7 +3,7 @@ import './App.css';
 import AddItem from './components/AddItem/AddItem';
 import Blogs from './components/Blogs/Blogs';
 import Home from './components/Home/Home';
-import SignIn from './components/SignIn/SignIn';
+import Authentication from './components/Authentication/Authentication';
 import ManageItems from './components/ManageItems/ManageItems';
 import MyItems from './components/MyItems/MyItems';
 import Header from './components/Shared/Header/Header';
@@ -19,8 +19,11 @@ function App() {
         <Route path='/manageitems' element={<ManageItems />} />
         <Route path='/additem' element={<AddItem />} />
         <Route path='/myitems' element={<MyItems />} />
-        <Route path='/signin' element={<SignIn />} />
+        <Route path='/signin' element={<Authentication />} />
+        <Route path='/signup' element={<Authentication />} />
       </Routes>
+
+      <p className='text-center'>Footer</p>
     </>
   );
 }

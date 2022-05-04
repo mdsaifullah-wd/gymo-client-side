@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
-import './CustomLink.css';
 
 const CustomLink = ({ children, to, ...props }) => {
   let resolved = useResolvedPath(to);
@@ -9,8 +8,9 @@ const CustomLink = ({ children, to, ...props }) => {
   return (
     <div>
       <Link
-        className='custom-link'
-        style={{ color: match ? '#38bdf8' : '#e2e8f0' }}
+        className={`${
+          match ? 'text-secondary' : 'text-light'
+        } hover:text-secondary`}
         to={to}
         {...props}>
         {children}
