@@ -7,6 +7,7 @@ import Authentication from './components/Authentication/Authentication';
 import ManageItems from './components/ManageItems/ManageItems';
 import MyItems from './components/MyItems/MyItems';
 import Header from './components/Shared/Header/Header';
+import ProtectedRoute from './components/Shared/ProtectedRoute/ProtectedRoute';
 
 function App() {
   return (
@@ -16,9 +17,30 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/blogs' element={<Blogs />} />
-        <Route path='/manageitems' element={<ManageItems />} />
-        <Route path='/additem' element={<AddItem />} />
-        <Route path='/myitems' element={<MyItems />} />
+        <Route
+          path='/manageitems'
+          element={
+            <ProtectedRoute>
+              <ManageItems />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path='/additem'
+          element={
+            <ProtectedRoute>
+              <AddItem />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path='/myitems'
+          element={
+            <ProtectedRoute>
+              <MyItems />
+            </ProtectedRoute>
+          }
+        />
         <Route path='/signin' element={<Authentication />} />
         <Route path='/signup' element={<Authentication />} />
       </Routes>

@@ -12,6 +12,9 @@ import {
 const Authentication = () => {
   const path = useLocation().pathname;
   const navigate = useNavigate();
+  const location = useLocation();
+
+  let from = location.state?.from?.pathname;
 
   const {
     register,
@@ -61,7 +64,7 @@ const Authentication = () => {
   };
 
   if (userFromSignIn || userFromSignUp || userFromGoogleSignIn) {
-    navigate('/');
+    navigate(from || '/', { replace: true });
   }
 
   if (errorFromSignIn?.message) {
@@ -93,7 +96,7 @@ const Authentication = () => {
     <>
       <div className='container max-w-lg mt-20 mx-auto min-h-[calc(100vh-80px)]'>
         <h2 className='text-bold text-4xl text-center mb-8 uppercase'>
-          {path === '/signup' ? 'Sign Up' : 'Sign In'}
+          {path === '/signup' ? 'Sign Up' : from ? 'Sign In First' : 'Sign In'}
         </h2>
         <button
           className='flex justify-center items-center gap-3 w-full h-12 mb-1 mt-4 px-4  text-xl rounded-md border border-light hover:bg-secondary hover:text-primary hover:border-secondary'
