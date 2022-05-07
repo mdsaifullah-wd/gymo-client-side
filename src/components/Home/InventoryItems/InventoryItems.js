@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Item from './Item/Item';
 
 const InventoryItems = () => {
@@ -17,6 +18,7 @@ const InventoryItems = () => {
           <Item key={item.id} item={item} />
         ))}
       </div>
+      <Link to='/manage-inventory'>Manage Inventories</Link>
     </div>
   );
 };

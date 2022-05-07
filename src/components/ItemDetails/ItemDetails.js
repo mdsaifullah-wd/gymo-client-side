@@ -2,7 +2,7 @@ import { async } from '@firebase/util';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const ItemDetails = () => {
   const { id } = useParams();
@@ -112,6 +112,7 @@ const ItemDetails = () => {
               Restock the item
             </button>
           </form>
+          <Link to='/manage-inventory'>Manage Inventories</Link>
         </div>
       </div>
     </div>

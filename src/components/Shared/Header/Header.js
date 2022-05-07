@@ -26,9 +26,9 @@ const Header = () => {
           <CustomLink to='/blogs'>Blogs</CustomLink>
           {user?.email && (
             <>
-              <CustomLink to='/manageitems'>Manage Items</CustomLink>
-              <CustomLink to='/additem'>Add Item</CustomLink>
-              <CustomLink to='/myitems'>My Items</CustomLink>
+              <CustomLink to='/manage-inventory'>Manage Inventory</CustomLink>
+              <CustomLink to='/add-item'>Add Item</CustomLink>
+              <CustomLink to='/my-items'>My Items</CustomLink>
             </>
           )}
 

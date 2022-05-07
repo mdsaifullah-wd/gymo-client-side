@@ -4,7 +4,7 @@ import AddItem from './components/AddItem/AddItem';
 import Blogs from './components/Blogs/Blogs';
 import Home from './components/Home/Home';
 import Authentication from './components/Authentication/Authentication';
-import ManageItems from './components/ManageItems/ManageItems';
+import ManageInventory from './components/ManageInventory/ManageInventory';
 import MyItems from './components/MyItems/MyItems';
 import Header from './components/Shared/Header/Header';
 import ProtectedRoute from './components/Shared/ProtectedRoute/ProtectedRoute';
@@ -19,15 +19,15 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route
-          path='/manageitems'
+          path='/manage-inventory'
           element={
             <ProtectedRoute>
-              <ManageItems />
+              <ManageInventory />
             </ProtectedRoute>
           }
         />
         <Route
-          path='/additem'
+          path='/add-item'
           element={
             <ProtectedRoute>
               <AddItem />
@@ -35,7 +35,7 @@ function App() {
           }
         />
         <Route
-          path='/myitems'
+          path='/my-items'
           element={
             <ProtectedRoute>
               <MyItems />
