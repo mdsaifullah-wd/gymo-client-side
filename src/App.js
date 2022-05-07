@@ -8,6 +8,7 @@ import ManageItems from './components/ManageItems/ManageItems';
 import MyItems from './components/MyItems/MyItems';
 import Header from './components/Shared/Header/Header';
 import ProtectedRoute from './components/Shared/ProtectedRoute/ProtectedRoute';
+import ItemDetails from './components/ItemDetails/ItemDetails';
 
 function App() {
   return (
@@ -38,6 +39,14 @@ function App() {
           element={
             <ProtectedRoute>
               <MyItems />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path='/inventory/:id'
+          element={
+            <ProtectedRoute>
+              <ItemDetails />
             </ProtectedRoute>
           }
         />

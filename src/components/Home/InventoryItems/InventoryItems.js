@@ -1,12 +1,13 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Item from './Item/Item';
 
 const InventoryItems = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch('https://gymowarehouse.herokuapp.com/inventory')
-      .then((res) => res.json())
-      .then((data) => setItems(data));
+    axios
+      .get('https://gymowarehouse.herokuapp.com/inventory')
+      .then((res) => setItems(res.data));
   }, []);
   return (
     <div className='container bg-dark py-9'>
