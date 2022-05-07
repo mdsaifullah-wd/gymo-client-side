@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ManageInventory = () => {
   const [items, setItems] = useState([]);
+  const navigate = useNavigate();
   const thStyle = 'text-base font-medium text-gray-900 px-6 py-4';
   const tdStyle =
     'text-base text-light font-medium px-6 py-4 whitespace-nowrap';
@@ -24,6 +25,9 @@ const ManageInventory = () => {
         })
         .catch((err) => console.log(err));
     }
+  };
+  const showInventoryDetails = (id) => {
+    navigate(`/inventory/${id}`);
   };
 
   useEffect(() => {
@@ -63,7 +67,16 @@ const ManageInventory = () => {
                   <td className={tdStyle}>{item.soldItems || '0'}</td>
                   <td className={tdStyle}>{item.supplier}</td>
                   <td className={tdStyle}>
-                    <button onClick={() => deleteItem(item._id)}>Delete</button>
+                    <button
+                      onClick={() => deleteItem(item._id)}
+                      className='hover:text-secondary mr-4'>
+                      Delete
+                    </button>
+                    <button
+                      onClick={() => showInventoryDetails(item._id)}
+                      className='hover:text-secondary'>
+                      Update-Stock
+                    </button>
                   </td>
                 </tr>
               );
