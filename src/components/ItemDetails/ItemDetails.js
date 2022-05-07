@@ -8,7 +8,16 @@ const ItemDetails = () => {
   const { id } = useParams();
   const [item, setItem] = useState({});
   const [err, setErr] = useState('');
-  const { _id, name, image, description, price, quantity, supplier } = item;
+  const {
+    _id,
+    name,
+    image,
+    description,
+    price,
+    quantity,
+    soldItems,
+    supplier,
+  } = item;
   const url = `https://gymowarehouse.herokuapp.com/inventory/${id}`;
   const url2 = `http://localhost:3001/inventory/${id}`;
   console.log(url, url2);
@@ -20,13 +29,15 @@ const ItemDetails = () => {
   }, []);
 
   const reduceQuantity = () => {
-    let { quantity, ...rest } = item;
+    let { quantity, soldItems, ...rest } = item;
     quantity -= 1;
+    soldItems += 1;
     axios
-      .put(url, { quantity })
+      .put(url, { quantity, soldItems })
       .then((res) => {
         if (res.status === 200) {
           rest.quantity = quantity;
+          rest.soldItems = soldItems;
           setItem(rest);
         }
       })
@@ -68,6 +79,8 @@ const ItemDetails = () => {
           <div className='text-base mb-8'>
             <p>Price: $ {price}</p>
             <p>Quantity: {quantity === 0 ? 'Stock Out' : quantity}</p>
+            <p>Sold Items: {soldItems}</p>
+
             <p>Supplier: {supplier}</p>
           </div>
           <p className='text-error text-base mb-3'>{err}</p>
@@ -76,13 +89,13 @@ const ItemDetails = () => {
             className='h-10 border-2 px-8 border-light rounded-md hover:bg-secondary hover:border-secondary hover:text-dark'>
             Delivered
           </button>
-          <h2>Restock the items</h2>
+
           <form>
             <input
               className='text-primary bg-light'
               type='number'
               {...register('quantity', {
-                required: 'Enter quantity',
+                required: 'Item quantity',
                 min: {
                   value: 0,
                   message: 'Quantity should be a positive number',
@@ -96,7 +109,7 @@ const ItemDetails = () => {
             <button
               onClick={handleSubmit(addQuantity)}
               className='h-10 border-2 px-8 border-light rounded-md hover:bg-secondary hover:border-secondary hover:text-dark'>
-              Add Quantity
+              Restock the item
             </button>
           </form>
         </div>
