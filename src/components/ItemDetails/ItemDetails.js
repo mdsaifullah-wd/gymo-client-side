@@ -94,7 +94,7 @@ const ItemDetails = () => {
             <input
               className='text-primary bg-light'
               type='number'
-              {...register('Item quantity', {
+              {...register('quantity', {
                 required: 'Enter quantity',
                 min: {
                   value: 0,
