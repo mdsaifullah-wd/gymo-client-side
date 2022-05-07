@@ -79,7 +79,7 @@ const ItemDetails = () => {
           <div className='text-base mb-8'>
             <p>Price: $ {price}</p>
             <p>Quantity: {quantity === 0 ? 'Stock Out' : quantity}</p>
-            <p>Sold Items: {soldItems}</p>
+            <p>Sold Items: {soldItems || '0'}</p>
 
             <p>Supplier: {supplier}</p>
           </div>
@@ -94,8 +94,8 @@ const ItemDetails = () => {
             <input
               className='text-primary bg-light'
               type='number'
-              {...register('quantity', {
-                required: 'Item quantity',
+              {...register('Item quantity', {
+                required: 'Enter quantity',
                 min: {
                   value: 0,
                   message: 'Quantity should be a positive number',
