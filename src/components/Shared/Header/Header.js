@@ -24,6 +24,8 @@ const Header = () => {
         <nav className=' gap-5 items-center text-lg hidden md:flex'>
           <CustomLink to='/'>Home</CustomLink>
           <CustomLink to='/blogs'>Blogs</CustomLink>
+          <CustomLink to='/inventory'>Inventory</CustomLink>
+          <CustomLink to='/contact'>Contact</CustomLink>
           {user?.email && (
             <>
               <CustomLink to='/manage-inventory'>Manage Inventory</CustomLink>

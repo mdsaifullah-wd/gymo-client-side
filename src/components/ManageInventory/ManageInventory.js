@@ -31,9 +31,9 @@ const ManageInventory = () => {
   };
 
   useEffect(() => {
-    // const url = 'https://gymowarehouse.herokuapp.com/inventory'
-    const url2 = 'http://localhost:3001/inventory';
-    axios.get(url2).then((res) => setItems(res.data));
+    const url = 'https://gymowarehouse.herokuapp.com/inventory';
+    // const url2 = 'http://localhost:3001/inventory';
+    axios.get(url).then((res) => setItems(res.data));
   }, []);
   return (
     <div className='min-h-[calc(100vh-80px)]'>

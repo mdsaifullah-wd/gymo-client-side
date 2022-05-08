@@ -10,6 +10,8 @@ import Header from './components/Shared/Header/Header';
 import ProtectedRoute from './components/Shared/ProtectedRoute/ProtectedRoute';
 import ItemDetails from './components/ItemDetails/ItemDetails';
 import Footer from './components/Shared/Footer/Footer';
+import Inventory from './components/Inventory/Inventory';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/blogs' element={<Blogs />} />
+        <Route path='/inventory' element={<Inventory />} />
+        <Route path='/contact' element={<Contact />} />
         <Route
           path='/manage-inventory'
           element={
