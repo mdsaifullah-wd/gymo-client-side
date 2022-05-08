@@ -6,9 +6,9 @@ import Item from './Item/Item';
 const InventoryItems = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    axios
-      .get('https://gymowarehouse.herokuapp.com/inventory')
-      .then((res) => setItems(res.data));
+    // const url = 'https://gymowarehouse.herokuapp.com/inventory/?item=6'
+    const url2 = 'http://localhost:3001/home/inventory/';
+    axios.get(url2).then((res) => setItems(res.data));
   }, []);
   return (
     <div className='container bg-dark py-9'>
