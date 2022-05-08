@@ -25,7 +25,6 @@ const Header = () => {
           <CustomLink to='/'>Home</CustomLink>
           <CustomLink to='/blogs'>Blogs</CustomLink>
           <CustomLink to='/inventory'>Inventory</CustomLink>
-          <CustomLink to='/contact'>Contact</CustomLink>
           {user?.email && (
             <>
               <CustomLink to='/manage-inventory'>Manage Inventory</CustomLink>
@@ -34,6 +33,7 @@ const Header = () => {
             </>
           )}
 
+          <CustomLink to='/contact'>Contact</CustomLink>
           {user?.email ? (
             <button onClick={handleSignOut}>Sign Out</button>
           ) : (

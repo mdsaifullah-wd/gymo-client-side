@@ -12,6 +12,7 @@ import ItemDetails from './components/ItemDetails/ItemDetails';
 import Footer from './components/Shared/Footer/Footer';
 import Inventory from './components/Inventory/Inventory';
 import Contact from './components/Contact/Contact';
+import PageNotFound from './components/PageNotFound/PageNotFound';
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
         />
         <Route path='/signin' element={<Authentication />} />
         <Route path='/signup' element={<Authentication />} />
+        <Route path='/*' element={<PageNotFound />} />
       </Routes>
 
       <Footer />
