@@ -9,6 +9,7 @@ import MyItems from './components/MyItems/MyItems';
 import Header from './components/Shared/Header/Header';
 import ProtectedRoute from './components/Shared/ProtectedRoute/ProtectedRoute';
 import ItemDetails from './components/ItemDetails/ItemDetails';
+import Footer from './components/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -54,7 +55,7 @@ function App() {
         <Route path='/signup' element={<Authentication />} />
       </Routes>
 
-      <p className='text-center'>Footer</p>
+      <Footer />
     </>
   );
 }

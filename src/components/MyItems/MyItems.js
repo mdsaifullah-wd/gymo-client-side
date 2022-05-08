@@ -40,7 +40,7 @@ const MyItems = () => {
       .then((res) => setItems(res.data));
   }, []);
   return (
-    <>
+    <div className='min-h-[calc(100vh-80px)]'>
       <h2 className='text-3xl text-center my-10'>My Items</h2>
       <div className='container'>
         <p className='text-right text-xl'>{user.displayName}</p>
@@ -91,7 +91,7 @@ const MyItems = () => {
         </table>
         <Link to='/add-item'>Add New Items</Link>
       </div>
-    </>
+    </div>
   );
 };
 

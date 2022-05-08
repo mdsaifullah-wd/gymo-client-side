@@ -41,9 +41,9 @@ const Banner = () => {
         }}
         zoom={true}
         modules={[Navigation, Pagination, EffectFade, Keyboard, Autoplay, Zoom]}
-        className='mySwiper'>
+        className='mySwiper mb-20'>
         <SwiperSlide>
-          <div className='container grid grid-cols-2 items-center gap-10 bg-primary py-28'>
+          <div className='container grid grid-cols-2 items-center gap-10 bg-primary py-24'>
             <div>
               <h1 className='text-5xl mb-5'>
                 The largest Warehouse for Gym Equipments
@@ -60,7 +60,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='container grid grid-cols-2 items-center gap-10 bg-primary py-28'>
+          <div className='container grid grid-cols-2 items-center gap-10 bg-primary py-24'>
             <div>
               <h1 className='text-5xl mb-5'>
                 Stay Healthy with Gymo Equipments
@@ -68,7 +68,7 @@ const Banner = () => {
               <p className='text-xl'>
                 Gymo Equipment is to help you stay healthy. Get your exercise
                 done with our product. Our largest warehouse is available
-                anytime
+                anytime.
               </p>
             </div>
             <div>

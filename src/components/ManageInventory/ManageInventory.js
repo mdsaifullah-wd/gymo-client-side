@@ -36,7 +36,7 @@ const ManageInventory = () => {
       .then((res) => setItems(res.data));
   }, []);
   return (
-    <>
+    <div className='min-h-[calc(100vh-80px)]'>
       <h2 className='text-3xl text-center my-10'>Manage Inventory</h2>
       <div className='container'>
         <table className='min-w-full text-center'>
@@ -85,7 +85,7 @@ const ManageInventory = () => {
         </table>
         <Link to='/add-item'>Add New Items</Link>
       </div>
-    </>
+    </div>
   );
 };
 
