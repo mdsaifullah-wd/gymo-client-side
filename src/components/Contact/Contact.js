@@ -27,7 +27,7 @@ const Contact = () => {
               placeholder='Phone Number'
             />
             <textarea
-              className='h-20 px-4 py-3 text-xl text-dark focus:outline-0 col-span-2'
+              className='h-20 px-4 py-3 text-xl text-dark focus:outline-0 md:col-span-2'
               type='text'
               placeholder='Enter Message'
             />
@@ -65,7 +65,9 @@ const Contact = () => {
         </div>
       </div>
       <div className='container bg-dark py-20 text-center'>
-        <p className='text-6xl'>Lets Start Your Business with Us!</p>
+        <p className='text-4xl md:text-6xl'>
+          Lets Start Your Business with Us!
+        </p>
       </div>
     </div>
   );

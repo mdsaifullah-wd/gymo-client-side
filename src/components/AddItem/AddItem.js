@@ -29,8 +29,8 @@ const AddItem = () => {
   };
   const inputStyle = `block w-full h-12 mb-1 mt-4 px-4 bg-light text-primary text-xl focus:outline-0 rounded-md border-error`;
   return (
-    <div className='container max-w-2xl min-h-[calc(100vh-80px)]'>
-      <h2 className='text-3xl text-center'>Add Item</h2>
+    <div className='container max-w-2xl min-h-[calc(100vh-80px)] py-20'>
+      <h2 className='text-5xl mb-16 uppercase text-center'>Add Item</h2>
 
       <form onSubmit={handleSubmit(submitForm)}>
         <input

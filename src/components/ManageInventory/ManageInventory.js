@@ -36,19 +36,26 @@ const ManageInventory = () => {
     axios.get(url).then((res) => setItems(res.data));
   }, []);
   return (
-    <div className='min-h-[calc(100vh-80px)]'>
-      <h2 className='text-3xl text-center my-10'>Manage Inventory</h2>
+    <div className='min-h-[calc(100vh-80px)] py-20'>
+      <h2 className='text-5xl text-center mb-16 uppercase'>Manage Inventory</h2>
       <div className='container'>
+        <div className='flex justify-end'>
+          <Link
+            to='/add-item'
+            className='text-xl px-6 py-4 bg-secondary border border-secondary rounded-md text-primary hover:bg-dark hover:text-light hover:border-light inline-block mb-8'>
+            Add New Item
+          </Link>
+        </div>
         <table className='min-w-full text-center'>
           <thead>
             <tr className='bg-secondary text-primary'>
               <th scope='col' className={thStyle}>
                 Product Name
               </th>
-              <th className={thStyle}>Price</th>
-              <th className={thStyle}>Quantity</th>
-              <th className={thStyle}>Sold Items</th>
-              <th className={thStyle}>Supplier</th>
+              <th className={`hidden md:table-cell ${thStyle}`}>Price</th>
+              <th className={`hidden md:table-cell ${thStyle}`}>Quantity</th>
+              <th className={`hidden md:table-cell ${thStyle}`}>Sold Items</th>
+              <th className={`hidden md:table-cell ${thStyle}`}>Supplier</th>
               <th className={thStyle}>Action</th>
             </tr>
           </thead>
@@ -62,10 +69,18 @@ const ManageInventory = () => {
                       : 'bg-medium hover:bg-medium/75 border-dark'
                   }`}>
                   <td className={tdStyle}>{item.name}</td>
-                  <td className={tdStyle}>{item.price}</td>
-                  <td className={tdStyle}>{item.quantity}</td>
-                  <td className={tdStyle}>{item.soldItems || '0'}</td>
-                  <td className={tdStyle}>{item.supplier}</td>
+                  <td className={`hidden md:table-cell ${tdStyle}`}>
+                    {item.price}
+                  </td>
+                  <td className={`hidden md:table-cell ${tdStyle}`}>
+                    {item.quantity}
+                  </td>
+                  <td className={`hidden md:table-cell ${tdStyle}`}>
+                    {item.soldItems || '0'}
+                  </td>
+                  <td className={`hidden md:table-cell ${tdStyle}`}>
+                    {item.supplier}
+                  </td>
                   <td className={tdStyle}>
                     <button
                       onClick={() => deleteItem(item._id)}
@@ -83,7 +98,6 @@ const ManageInventory = () => {
             })}
           </tbody>
         </table>
-        <Link to='/add-item'>Add New Items</Link>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ const GetStarted = () => {
     <div className='container py-20 bg-dark text-center'>
       <div className='max-w-2xl mx-auto'>
         <h3 className='text-xl mb-3'>Ready to Get Started</h3>
-        <h2 className='text-6xl mb-8'>
+        <h2 className='text-4xl md:text-6xl mb-8'>
           We are ready to give you the best service
         </h2>
         <div className='flex gap-6 justify-center'>

@@ -43,7 +43,7 @@ const Banner = () => {
         modules={[Navigation, Pagination, EffectFade, Keyboard, Autoplay, Zoom]}
         className='mySwiper mb-20'>
         <SwiperSlide>
-          <div className='container grid grid-cols-2 items-center gap-10 bg-primary py-24'>
+          <div className='container grid md:grid-cols-2 items-center gap-10 bg-primary py-24'>
             <div>
               <h1 className='text-5xl mb-5'>
                 The largest Warehouse for Gym Equipments
@@ -60,7 +60,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='container grid grid-cols-2 items-center gap-10 bg-primary py-24'>
+          <div className='container grid md:grid-cols-2 items-center gap-10 bg-primary py-24'>
             <div>
               <h1 className='text-5xl mb-5'>
                 Stay Healthy with Gymo Equipments

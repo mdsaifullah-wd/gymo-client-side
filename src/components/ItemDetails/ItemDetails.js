@@ -84,15 +84,10 @@ const ItemDetails = () => {
             <p>Supplier: {supplier}</p>
           </div>
           <p className='text-error text-base mb-3'>{err}</p>
-          <button
-            onClick={() => reduceQuantity(_id)}
-            className='h-10 border-2 px-8 border-light rounded-md hover:bg-secondary hover:border-secondary hover:text-dark'>
-            Delivered
-          </button>
 
-          <form>
+          <form className='flex gap-3 my-8 '>
             <input
-              className='text-primary bg-light'
+              className='h-10 px-3 bg-light text-primary text-lg focus:outline-0 rounded-md'
               type='number'
               {...register('quantity', {
                 required: 'Enter quantity',
@@ -108,11 +103,22 @@ const ItemDetails = () => {
             </p>
             <button
               onClick={handleSubmit(addQuantity)}
-              className='h-10 border-2 px-8 border-light rounded-md hover:bg-secondary hover:border-secondary hover:text-dark'>
+              className='text-dark bg-secondary border border-secondary px-3 h-10 text-lg rounded-md hover:bg-primary hover:text-light hover:border-light'>
               Restock the item
             </button>
           </form>
-          <Link to='/manage-inventory'>Manage Inventories</Link>
+          <div className='flex gap-5 items-center'>
+            <button
+              onClick={() => reduceQuantity(_id)}
+              className='h-10 border-2 px-8 border-light rounded-md hover:bg-secondary hover:border-secondary hover:text-dark text-xl'>
+              Delivered
+            </button>
+            <Link
+              to='/manage-inventory'
+              className='h-10 border-2 px-8 py-1 border-light rounded-md hover:bg-secondary hover:border-secondary hover:text-dark inline-block text-xl'>
+              Manage Inventories
+            </Link>
+          </div>
         </div>
       </div>
     </div>
